@@ -50,6 +50,7 @@
   a:visited { color: var(--link-visited); }
 
   strong, b { font-weight: 700; }
+  i, em { font-style: italic; }
 
   :focus-visible { outline: 2px solid var(--link); outline-offset: 1px; }
 </style>
@@ -128,6 +129,18 @@
 
 <p>Я выложил на гугл-драйв <a href="https://drive.google.com/drive/folders/10QkZ0jAYVVY6nF3npiiC1lo27KUAhy5g?usp=sharing">несколько картинок из прошлого</a>.</p>
 
+<h2>Публичные выступления</h2>
+
+<ul>
+  <li><a href="https://lab-wir.de/sofronov_ai_tools/ru">Про то, как делать проекты с помощью ИИ</a> — <i>WIR.DE, 2026</i></li>
+  <li>Про прикольные факты в разных языках — <i>домашняя конференция в Бишкеке, 2022</i></li>
+  <li>Про важность дизайна для маленьких проектов — <i>фестиваль локального бизнеса «Искра», 2016</i></li>
+  <li>Про то, как писать тексты (вместе с Алисой Яннау) — <i>в студии «Как рисовать», ~2016</i></li>
+  <li>Про сексуальные девиации — <i>домашняя конференция в Санкт-Петербурге, ~2016</i></li>
+  <li>Про то, как критиковать и зачем любить критику — <i>Первая Международная Конференция имени Оли Поляковой, 2015</i></li>
+  <li>Про заикание и не только про речь — <i>Табурет, 2015</i></li>
+</ul>
+
 <h2>Что я хочу дальше</h2>
 
 <ul>
@@ -189,6 +202,15 @@
 <p>Дополняется.</p>
 
 <p>1 сентября 2026 · <a href="https://t.me/zeniasofronov">t.me/zeniasofronov</a></p>
+
+<script>
+  for (const a of document.links) {
+    if (a.host !== location.host) {
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+    }
+  }
+</script>
 
 </body>
 </html>
