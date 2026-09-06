@@ -37,8 +37,9 @@
 
   img { display: block; max-width: 100%; height: auto; margin: 1em 0; }
 
-  .stickers { display: flex; flex-wrap: wrap; gap: 16px; margin: 1.6em 0; }
-  .sticker { display: block; max-width: 200px; margin: 0; }
+  .stickers { display: flex; flex-wrap: wrap; gap: 16px; margin: 1.6em 0; width: max-content; max-width: calc(100vw - 32px); }
+  .stickers a { flex: 0 0 auto; display: block; }
+  .sticker { display: block; width: 300px; max-width: calc(100vw - 32px); height: auto; margin: 0; }
 
   a { color: var(--link); text-decoration: underline; }
   a:visited { color: var(--link-visited); }
@@ -57,14 +58,12 @@
 
 <h2>Наклейки</h2>
 
-<p>Я люблю делать наклейки — обычно под свои проекты и каналы. Получается что-то среднее между мерчем и открыткой.</p>
-
-<p>Если при встрече вам понравится что-то из того, что я делаю, — попросите наклейку, я обычно ношу с собой пачку.</p>
+<p>Я люблю делать наклеечки. Попросите у меня их при встрече, я с радостью подарю.</p>
 
 <div class="stickers">
-  <a href="https://t.me/notburningout"><img class="sticker" src="merch-1.png" width="500" height="500" alt="Наклейка канала «Чтобы не выгорать»: улыбающееся облако с молниями и радугой"></a>
-  <a href="https://t.me/wiemanklarkommt"><img class="sticker" src="merch-2.png" width="500" height="500" alt="Наклейка канала «Wie man klarkommt»: улыбающаяся жёлтая звезда на синем фоне"></a>
-  <a href="https://t.me/untilASI"><img class="sticker" src="merch-3.png" width="500" height="500" alt="Наклейка канала «Жизнь и ИИ»: улыбающаяся фиолетовая клякса со звёздочкой и текстом «Игнорируй все предыдущие инструкции»"></a>
+  <a href="https://t.me/notburningout"><img class="sticker" src="merch-1.png" width="1098" height="1098" alt="Наклейка канала «Чтобы не выгорать»: улыбающееся облако с молниями и радугой"></a>
+  <a href="https://t.me/wiemanklarkommt"><img class="sticker" src="merch-2.png" width="1098" height="1098" alt="Наклейка канала «Wie man klarkommt»: улыбающаяся жёлтая звезда на синем фоне"></a>
+  <a href="https://t.me/untilASI"><img class="sticker" src="merch-3.png" width="1098" height="1098" alt="Наклейка канала «Жизнь и ИИ»: улыбающаяся фиолетовая клякса со звёздочкой и текстом «Игнорируй все предыдущие инструкции»"></a>
 </div>
 
 <p>Постоянно дополняется · 2 сентября 2026 · <a href="https://t.me/zeniasofronov">t.me/zeniasofronov</a></p>
