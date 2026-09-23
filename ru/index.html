@@ -63,9 +63,29 @@
 <p>RU · <a href="../de/">DE</a> · <a href="../en/">EN</a></p>
 
 <figure>
-<img src="../photo.jpg" width="1600" height="785" alt="Женя Софронов на очень красивом фиолетовом фоне, Бишкек, 2022">
-<figcaption>Бишкек, 2022</figcaption>
+<img id="main-photo" src="../photo.jpg" width="1600" height="785" alt="Женя Софронов на очень красивом фиолетовом фоне, Бишкек, 2022">
+<figcaption id="main-photo-caption">Бишкек, 2022</figcaption>
 </figure>
+
+<script>
+  (function () {
+    var variants = [
+      { src: "../photo.jpg", w: 1600, h: 785, alt: "Женя Софронов на очень красивом фиолетовом фоне, Бишкек, 2022", caption: "Бишкек, 2022" },
+      { src: "../photo2.jpg", w: 1600, h: 785, alt: "Женя Софронов смотрит в бинокль в поле недалеко от Берлина, в розовой толстовке и бежевой кепке, 2026", caption: "Берлин, 2026" }
+    ];
+    var idx = Math.floor(Math.random() * variants.length);
+    try {
+      var last = sessionStorage.getItem("photoIdx");
+      if (variants.length > 1 && String(idx) === last) idx = (idx + 1) % variants.length;
+      sessionStorage.setItem("photoIdx", idx);
+    } catch (e) {}
+    var v = variants[idx];
+    var img = document.getElementById("main-photo");
+    var cap = document.getElementById("main-photo-caption");
+    if (img) { img.src = v.src; img.width = v.w; img.height = v.h; img.alt = v.alt; }
+    if (cap) cap.textContent = v.caption;
+  })();
+</script>
 
 <h2>Про что это</h2>
 

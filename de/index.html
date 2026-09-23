@@ -63,9 +63,29 @@
 <p><a href="../ru/">RU</a> · DE · <a href="../en/">EN</a></p>
 
 <figure>
-<img src="../photo.jpg" width="1600" height="785" alt="Ženja Sofronov vor einem sehr schönen violetten Hintergrund, Bischkek, 2022">
-<figcaption>Bischkek, 2022</figcaption>
+<img id="main-photo" src="../photo.jpg" width="1600" height="785" alt="Ženja Sofronov vor einem sehr schönen violetten Hintergrund, Bischkek, 2022">
+<figcaption id="main-photo-caption">Bischkek, 2022</figcaption>
 </figure>
+
+<script>
+  (function () {
+    var variants = [
+      { src: "../photo.jpg", w: 1600, h: 785, alt: "Ženja Sofronov vor einem sehr schönen violetten Hintergrund, Bischkek, 2022", caption: "Bischkek, 2022" },
+      { src: "../photo2.jpg", w: 1600, h: 785, alt: "Ženja Sofronov schaut durch ein Fernglas auf einem Feld bei Berlin, in einem rosa Hoodie und einer beigen Kappe, 2026", caption: "Berlin, 2026" }
+    ];
+    var idx = Math.floor(Math.random() * variants.length);
+    try {
+      var last = sessionStorage.getItem("photoIdx");
+      if (variants.length > 1 && String(idx) === last) idx = (idx + 1) % variants.length;
+      sessionStorage.setItem("photoIdx", idx);
+    } catch (e) {}
+    var v = variants[idx];
+    var img = document.getElementById("main-photo");
+    var cap = document.getElementById("main-photo-caption");
+    if (img) { img.src = v.src; img.width = v.w; img.height = v.h; img.alt = v.alt; }
+    if (cap) cap.textContent = v.caption;
+  })();
+</script>
 
 <h2>Worum es hier geht</h2>
 
